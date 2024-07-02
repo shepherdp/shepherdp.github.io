@@ -1,0 +1,87 @@
+.box {
+    border:1px solid white;
+    border-radius:10px;
+    background-image: linear-gradient(to bottom right, blue, white);
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.resizebox {
+    border:1px solid white;
+    border-radius:10px;
+    background-image: linear-gradient(to bottom right, blue, white);
+    height: 10%;
+}
+
+.topbar {
+  overflow: hidden;
+  background-image: linear-gradient(to bottom right, black, white);
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  left: 180px;
+  width: 100%; /* Full width */
+}
+
+.sidenav {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.resizebox:hover{
+  height: 200px;
+  margin-top: 0px;
+ -moz-box-shadow:    0 0 50px antiquewhite;
+ -webkit-box-shadow: 0 0 50px antiquewhite;
+ box-shadow:         0 0 50px antiquewhite;
+}
+
+h2 {
+  color: #EEEEEE;
+  padding: 5px 5px;
+}
+
+.normaltext {
+  color: #000000;
+  font-size: 16px;
+  padding: 5px 5px;
+}
+
+.main {
+  margin-left: 180px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#hidden-div1 {
+        display: none;
+        color: white;
+}
+
+#hidden-div2 {
+        display: none;
+        color: white;
+}
