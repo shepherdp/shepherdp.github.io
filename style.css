@@ -2,6 +2,8 @@
     border:1px solid white;
     border-radius:10px;
     background-image: linear-gradient(to bottom right, blue, white);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 @media screen and (max-height: 450px) {
@@ -9,11 +11,39 @@
   .sidenav a {font-size: 18px;}
 }
 
+
+.lateral-panel {
+  color: #535353;
+  padding: 10px 10px 10px 10px;
+  margin-right: 20px; /* add this and change value acc */
+  float: left;
+  background-image: linear-gradient(to bottom right, white, BlanchedAlmond);
+}
+
+.vertical-panel {
+  color: #535353;
+  padding: 10px 10px;
+  margin-right: 20px; /* add this and change value acc */
+  background-image: linear-gradient(to bottom right, white, BlanchedAlmond);
+}
+
 .resizebox {
-    border:1px solid white;
-    border-radius:10px;
-    background-image: linear-gradient(to bottom right, blue, white);
-    height: 10%;
+  border:3px solid white;
+  border-radius:10px;
+  background-image: linear-gradient(to bottom right, BlanchedAlmond, white);
+  height: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  overflow: auto;
+}
+
+.resizebox:hover{
+  margin-top: 0px;
+ -moz-box-shadow:    0 0 50px antiquewhite;
+ -webkit-box-shadow: 0 0 50px antiquewhite;
+ box-shadow:         0 0 50px antiquewhite;
+ padding: 10px 10px 10px 10px;
 }
 
 .topbar {
@@ -23,6 +53,8 @@
   top: 0; /* Position the navbar at the top of the page */
   left: 180px;
   width: 100%; /* Full width */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 10px;
 }
 
 .sidenav {
@@ -50,14 +82,6 @@
   color: #f1f1f1;
 }
 
-.resizebox:hover{
-  height: 200px;
-  margin-top: 0px;
- -moz-box-shadow:    0 0 50px antiquewhite;
- -webkit-box-shadow: 0 0 50px antiquewhite;
- box-shadow:         0 0 50px antiquewhite;
-}
-
 h2 {
   color: #EEEEEE;
   padding: 5px 5px;
@@ -69,6 +93,10 @@ h2 {
   padding: 5px 5px;
 }
 
+.normaltext td {
+  width: 80%;
+}
+
 .main {
   margin-left: 180px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
@@ -76,12 +104,120 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #hidden-div1 {
-        display: none;
-        color: white;
+  display: none;
+  color: white;
 }
 
 #hidden-div2 {
-        display: none;
-        color: white;
+  display: none;
+  color: white;
+}
+
+#hidden-div3 {
+  display: none;
+  color: white;
+}
+
+#hidden-div4 {
+  display: none;
+  color: white;
+}
+
+#hidden-div5 {
+  display: none;
+  color: white;
+}
+
+progress {
+  border: none;
+  width: 200px;
+  height: 8px;
+  background: crimson;
+}
+
+progress {
+  color: lightblue;
+}
+
+progress::-moz-progress-bar {
+  background: lightblue;
+}
+
+progress::-webkit-progress-value {
+  background-image: linear-gradient(to bottom right, white, green);
+}
+
+progress::-webkit-progress-bar {
+  background: lightblue;
+}
+
+
+
+.collapsible {
+  background-image: linear-gradient(to bottom right, green, white);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-image: linear-gradient(to bottom right, green, antiquewhite);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom right, white, BlanchedAlmond);
+}
+
+
+
+.collapsible2 {
+  background-image: linear-gradient(to bottom right, green, white);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+#container {
+   border: 3px solid white;
+   padding: 15px;
+   background-image: linear-gradient(to bottom right, white, BlanchedAlmond);
+   font-size: 15px;
+}
+
+#expand-container {
+  overflow: hidden;
+}
+
+table {
+  border-top: 3px solid #DDD;
+  border-left: 3px solid #DDD;
+}
+
+#expand-contract {
+  border-bottom: 3px solid gray;
+  margin-top: -100%;
+  transition: all 1s;
+}
+
+#expand-contract.expanded {
+   background-image: linear-gradient(to bottom right, white, BlanchedAlmond);
+   margin-top: 0;
 }

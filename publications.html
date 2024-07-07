@@ -18,8 +18,156 @@
 </div>
 
 <div class="main">
-  <p>Here is a list of my peer-reviewed work.</p>
+  <p>( ^ w ^ ) Peekaboo!</p>
+
+  <button type="button" class="collapsible">Binary Opinion Dynamics with Mesophilic Agents (2023)</button>
+  <div class="content">
+      <div class="normaltext">
+        <p><b>Authors: </b>Patrick Shepherd, Anh Ngo, Said Maalim, Isaac Gray</p>
+        <table>
+            <tr><td>
+                <p><b>Abstract: </b>The study of opinion dynamics has experienced a gain in interest recently, especially with
+                individual communication infrastructures like the Internet. Much of this research uses simulations with
+                agents whose behavior and preferences are governed by a small set of rules. Most agent models in the
+                literature are homophilic and/or conforming. In this work, we explore the opinion trajectory and
+                self-sorting tendencies of a relatively new agent type: mesophilic agents, or those whose preference is for
+                an even mix of similarity and difference of opinion with each neighbor. We characterize the behavior of
+                these agents in topologically dynamic networks, and examine long-term behaviors of networks via common
+                metrics as well as the reward function used to reflect agent preferences. We empirically uncover several
+                apparent natural boundaries on things like network density and average.
+                </p>
+            </td></tr>
+        </table>
+        <object data="/pdfs/Mesophilic_Agents_Poster.pdf" type="application/pdf" width="100%" height="500px"></object>
+        <object data="/pdfs/BinOpDyn.pdf" type="application/pdf" width="100%" height="500px"></object>
+        <p><a href="/pdfs/BinOpDyn.pdf", target="_blank">View the paper</a> if it does not appear above.</p>
+      </div>
+  </div>
+
+  <button type="button" class="collapsible">Dissertation: Expanding Social Network Modeling Software and Agent Models
+      for Diffusion Processes (2021)</button>
+  <div class="content">
+      <div class="normaltext">
+        <p><b>Author: </b>Patrick Shepherd</p>
+        <p><b>Abstract: </b>In an increasingly digitally interconnected world, the study of social networks and their
+            dynamics is burgeoning. Anthropologically, the ubiquity of online social networks has had striking
+            implications for the condition of large portions of humanity.  This technology has facilitated content
+            creation of virtually all sorts, information sharing on an unprecedented scale, and connections and
+            communities among people with similar interests and skills. The first part of my research is a social
+            network evolution and visualization engine. Built on top of existing technologies, my software is designed
+            to provide abstractions from the underlying libraries, drive real-time network evolution based on
+            user-defined parameters, and optionally visualize that evolution at each step of the process. My software
+            provides a low maintenance interface for the creation of networks and update schemes for a wide array of
+            experimental contexts, an engine to drive network evolution, and a visualization platform to provide
+            real-time feedback about different aspects of the network to the researcher, as well as fine-grained
+            debugging tools.  We conducted investigations into the opinion dynamics of networks when multiple agent
+            “archetypes” interact together with this platform. We modeled agents’ archetypes with respect to two
+            attributes: their preference over their friends’ opinion profiles, and their tendency to change their
+            opinion over time. We extended the current state of agent modeling in opinion diffusion by providing a
+            unified 2D trajectory/preference space for agents that incorporates most common models in the literature.
+            We investigated six agent archetypes from this space, and examined the behavior of the network as a whole
+            and the individual agents in a variety of contexts. In another branch of work using our software, we
+            developed a network of agents who must carry out both economic and social activities during a pandemic.
+            Agents’ decisions about what actions to take (self-protective measures like masking, social distancing, or
+            waiting to run errands) are based on several factors, including perception of risk (obtained from news
+            reports, social connections, etc.) and economic need. We show with preliminary testing that this platform is
+            able to execute standard pandemic models successfully with the incorporation of the economic and social
+            dimensions, and that this paradigm may provide useful insight into effective agent-level response policies
+            that can be used in concert with other top-down approaches that comprise most of the recent pandemic
+            response research. We have investigated the implications of varying behavior profiles within a network of
+            agents, and how those behavioral compositions affect the overall climate of the network in return, and this
+            software will continue to facilitate similar research into the future.
+        </p>
+          <a href="https://uknowledge.uky.edu/cgi/viewcontent.cgi?article=1120&context=cs_etds" target="_blank">View the paper</a>
+      </div>
+  </div>
+
+  <button type="button" class="collapsible">Software for Agent-based Network Simulation and Visualization (2021)</button>
+  <div class="content">
+      <div class="normaltext">
+        <p><b>Authors: </b>Patrick Shepherd, Isaac Batts, Judy Goldsmith, Emory Hufbauer, Mia Weaver, Angela Zhang</p>
+
+        <p><b>Abstract: </b>We present a network software suite that can model contagions or opinion manipulation in
+            social networks, that combines features from the standard packages and extends them to allow complex,
+            interacting, dynamic topologies, and dynamic heterogeneous agent types, with individual interaction
+            policies. The framework allows for the easy implementation of new agent types, and provides flexible
+            visualization tools to elucidate network behavior over time.
+        </p>
+          <object data="/pdfs/visualizationsoftware.pdf" type="application/pdf" width="100%" height="500px"></object>
+          <p><a href="/pdfs/visualizationsoftware.pdf", target="_blank">View the paper</a> if it does not appear above.</p>
+      </div>
+  </div>
+
+  <button type="button" class="collapsible">An Investigation into the Sensitivity of Social Opinion Networks to
+      Heterogeneous Goals and Preferences (2020)</button>
+  <div class="content">
+      <div class="normaltext">
+          <p><b>Authors: </b>Patrick Shepherd, Mia Weaver, and Judy Goldsmith</p>
+          <table>
+            <tr><td>
+                <p><b>Abstract: </b>As research into the dynamics and properties of opinion diffusion on social networks has
+                    increased, so too has the attention paid to modeling such systems. Simulations using agent-based modeling
+                    (ABM) analyze aggregate network outcomes when individual agents act on typically limited information, and
+                    tend to focus on agents that are conforming and homophilic - that is, they prefer to be around similar
+                    others, and they update their own personal state over time to be more like their friends. In this work, we
+                    illustrate the value of diverse agent modeling in environments that allow for strategic unfriending. We
+                    focus on network dynamics generated by three agent models, or archetypes. Our work shows that polarization
+                    and consensus dynamics, as well as topological clustering effects, may rely more than previously known on
+                    the interplay between individuals' goals for the composition of their neighborhood's opinions.</p>
+            </td></tr>
+          </table>
+          <object data="/pdfs/investigation.pdf" type="application/pdf" width="100%" height="500px"></object>
+          <p><a href="/pdfs/investigation.pdf", target="_blank">View the paper</a> if it does not appear above.</p>
+      </div>
+  </div>
+
+  <button type="button" class="collapsible">A Reinforcement Learning Approach to Strategic Belief Revelation with Social
+      Influence (2020)</button>
+  <div class="content">
+      <div class="normaltext">
+        <p><b>Authors: </b>Patrick Shepherd, Mia Weaver, and Judy Goldsmith</p>
+        <table>
+          <tr><td>
+            <p><b>Abstract: </b>The study of social networks has increased rapidly in the past few decades. Of recent
+                interest are the dynamics of changing opinions over a network. Some research has investigated how
+                interpersonal influence can affect opinion change, how to maximize/minimize the spread of opinion change
+                over a network, and recently, if/how agents can act strategically to effect some outcome in the network's
+                opinion distribution. This latter problem can be modeled and addressed as a reinforcement learning problem;
+                we introduce an approach to help network agents find strategies that outperform hand-crafted policies. Our
+                preliminary results show that our approach is promising in networks with dynamic topologies.
+            </p>
+          </td></tr>
+        </table>
+        <object data="/pdfs/RL_for_SBR.pdf" type="application/pdf" width="100%" height="500px"></object>
+        <p><a href="/pdfs/RL_for_SBR.pdf", target="_blank">View the paper</a> if it does not appear above.</p>
+      </div>
+  </div>
+
+<!--  <button class="collapsible2" onclick="expandContract()">A Reinforcement Learning Approach to Strategic Belief-->
+<!--    Revelation with Social Influence (2020)</button>-->
+<!--  <div id="container">-->
+
+<!--    <div id="expand-container">-->
+<!--      <div id="expand-contract" class="expanded">-->
+<!--        <p><b>Abstract: </b>The study of social networks has increased rapidly in the past few decades. Of recent-->
+<!--          interest are the dynamics of changing opinions over a network. Some research has investigated how-->
+<!--          interpersonal influence can affect opinion change, how to maximize/minimize the spread of opinion change over-->
+<!--          a network, and recently, if/how agents can act strategically to effect some outcome in the network's opinion-->
+<!--          distribution. This latter problem can be modeled and addressed as a reinforcement learning problem; we-->
+<!--          introduce an approach to help network agents find strategies that outperform hand-crafted policies. Our-->
+<!--          preliminary results show that our approach is promising in networks with dynamic topologies.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div id="bottom-section">-->
+<!--      This section is always displayed-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
 </div>
 
+
+<script src="index.js"></script>
 </body>
 </html>
