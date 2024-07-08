@@ -70,9 +70,77 @@
   <button type="button" class="collapsible">SNEE (Social Network Evolution Engine)</button>
   <div class="content">
       <div class="normaltext">
-        <p>SNEE is a suite of tools packaged together in a GUI framework that is designed to handle diverse
-        experimental designs for examining social network evolution.</p>
-        <p>Here is another</p>
+        <p>SNEE is a suite of tools that is designed to handle diverse experimental designs for examining social network
+          evolution.  My last three years of graduate school were when I began my study of simulated social dynamics
+          by looking into opinion diffusion.  After studying the topic for several months, it became apparent that the
+          majority of popular models for opinion diffusion were really just special cases of a more general
+          hyperparameter space.  Thus, the first version of SNEE was born (although I didn't decide to call it that
+          until a few months before graduation)!
+        </p>
+        <p>The software is still a work in progress, but it is very powerful in its current form.  For starters, the
+          interface allows you to define all sorts of general parameters describing your network.
+        </p>
+        <ul>
+          <li>How many people are you simulating?</li>
+          <li>Is influence bidirectional? (e.g. do person A and person B influence each other, or does it only go one
+            way?)</li>
+          <li>Is influence strength constant, or do some people hold more influence than others?</li>
+          <li>How many opinions does each person have?</li>
+          <li>Are opinions of the form "yes or no", or do they exist on a spectrum?</li>
+          <li>Can people acquire new friends?  If so, how do they decide who to become friends with?</li>
+          <li>Can people lose friends?  If so, how does that happen?</li>
+          <li>And much more!</li>
+        </ul>
+        <p>The platform allows you to define the characteristics of your network in fine detail, with sensible presets
+          available for demonstration.  The platform doesn't only handle opinion diffusion, though; any mutable
+          individual characteristic (e.g. language, information, preferences, etc.) can be modeled in this way.
+          SNEE also has support for diffusion processes that propagate over categorical variables - that is, things like
+          disease where each agent can be in one of several states at any given time, like "healthy," "sick," or
+          "immune."  The rules for the propagation of this sort of phenomenon can also be defined manually.
+        </p>
+        <img src="/imgs/snee1.png" class="center">
+        <p>Above is an image from SNEE of a network with 100 people, bidirectional influence, and a single opinion each.
+          the color and size of each node is based on its betweenness centrality (a metric judging how much of a
+          bottleneck an individual is with respect to the simulated process), and the network has been constructed with
+          a "scale free" topology, meaning that a few people have many connections, and most people have few.  You also
+          probably noticed the panel on the left side of the screen.  That's where you get to control all the visual
+          aspects of your display, such as how to color and size the individual nodes, and how fast to animate the
+          visualization.  Oh right, I forgot to mention that: my platform allows you to watch the diffusion process play
+          out in real time instead of waiting for a program to run and then sifting through endless spreadsheets.  If AI
+          has taught us anything recently, it's that there are some jobs a human looking at an event can do better than
+          a computer processing data about that same event.
+        </p>
+        <p>I don't want to sound like I am speaking ill of data, though.  That's why I added a feature that allows the
+          user to automatically incorporate up to six subplots underneath the visualization of the network itself which
+          can display all the metrics you would usually be looking at: network density, various centrality metrics, and
+          even summary statistics about the diffusion (such as opinion change) itself.  Below is an example run in which
+          each person has opinions on four topics, and generally speaking everyone likes being around people who are
+          similar, and people also become more similar to those around them.  You can see in the bottom of the plot that
+          the density of the network increases over time, as reflected in the degree metric.  Betweenness goes down over
+          time, however, because as people become more and more connected to each other, there get to be fewer and fewer
+          bottlenecks.
+        </p>
+        <img class="center" src="/imgs/sneerun1.gif">
+        <p>That leads us to our next point: what about if our network is made up of a diverse group of people?  In other
+          words, what if some people seek out dissimilarity?  What if people are rebellious and become <em>less</em>
+          like those around them over time?  There are many questions like this that you can ask, and for this reason
+          a major feature of the platform is the ability to define agent types - that is, you can create different
+          subpopulations within your network that follow different behavioral rules over time, giving rise to some very
+          interesting emergent properties across the network.  Runs that implement these types of agents can produce
+          quite different results.
+        </p>
+        <img class="center" src="/imgs/sneerun2.gif">
+        <p>In the GIF above, we have some (blue) agents that are just like the ones from the first animation.  Then we
+        have some rebellious (orange) agents who like to buck trends and change their minds to go contrary to the
+        majority.  Then we have some chill green agents who like being around people with a mix of agreement and
+        disagreement with themselves.  You can see that in this case we still end up with a strong central chunk of
+        the network, but the agents in it are all blue!  The greens and oranges don't get ejected entirely, but they
+        do stay consistently less well-connected than those blues in the middle!  And this was only a single parameter
+        setting; you can play with the likelihood that someone will friend or unfriend another person, the threshold
+        of similarity they have to meet before they do that, the number of people who get to gain or lose friends per
+        time step, the maximum number of friends they can gain or lose, etc.  All the dynamics of this process are
+        parameterized in the interface, so you can tweak values to your heart's content, which incidentally makes models
+        very easy to tune and evaluate against external data sources.</p>
       </div>
   </div>
 
@@ -104,7 +172,7 @@
         end, when I wanted to understand Assembly code better, I decided to just make my own.  Sure, it doesn't work
         with any currently used instruction set, but that wasn't the point.  The point was for me to build an assembler
         that is as versatile as actual assemblers in use today.</p>
-        <img alt="My assembler computing Fibonacci numbers" width="700" height="400" class="center" src="/imgs/fib.gif">
+        <img alt="My assembler computing Fibonacci numbers" class="center" src="/imgs/fib.gif">
         <p>What you see here is my assembler carrying out a full program.  What is the program, you ask?  No computer
         engineer will be surprised to learn that it is calculating Fibonacci numers!  Cliche?  Yes.  Valuable?  Also
         yes.  And anyone watching the program execute might notice that I didn't exactly do things the most efficient
