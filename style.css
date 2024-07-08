@@ -12,6 +12,13 @@
   .sidenav a {font-size: 18px;}
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 
 .lateral-panel {
   color: #535353;
@@ -94,10 +101,6 @@ h2 {
   padding: 5px 5px;
 }
 
-.normaltext td {
-  width: 80%;
-}
-
 .main {
   margin-left: 180px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
@@ -136,9 +139,8 @@ h2 {
 
 progress {
   border: none;
-  width: 200px;
+  width: 150px;
   height: 8px;
-  background: crimson;
 }
 
 progress {
@@ -183,7 +185,6 @@ progress::-webkit-progress-bar {
 }
 
 
-
 .collapsible2 {
   background-image: linear-gradient(to bottom right, green, white);
   color: white;
@@ -221,4 +222,8 @@ table {
 #expand-contract.expanded {
    background-image: linear-gradient(to bottom right, white, BlanchedAlmond);
    margin-top: 0;
+}
+
+.vertical-panel td {
+  width: 80%;
 }

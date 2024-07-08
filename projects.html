@@ -76,27 +76,105 @@
       </div>
   </div>
 
-  <button type="button" class="collapsible">Custom Programming Language (SAFyR)</button>
-  <div class="content">
-      <div class="normaltext">
-        <p>Here is one two</p>
-        <p>Here is another one two</p>
-      </div>
-  </div>
-
   <button type="button" class="collapsible">Custom Assembler Simulation</button>
   <div class="content">
       <div class="normaltext">
-        <p>Here is one two</p>
-        <p>Here is another one two</p>
+        <p>A dozen years ago, you would never have been able to convince me that one day I would <em>really</em> know
+        how computers work.  That was something that wizards did, you know?  Computer conjurers.  Silicon sorecerers.
+        Masters of programming prestidigi... well, you get the idea.  Something for people smarter than myself.  I
+        thought the same about physics, calculus, and on and on.  But then I took a programming class.</p>
+        <p>I distinctly remember being in my first Python class, which was my first official experience programming
+        anything ever.  I used to feel so confused by everything, and when the professor said that in order to be good
+        programmers we would have to think like a compiler, I figured all hope was lost.  I would overhear other people
+        in the class explaining topics to each other like they <em>really</em> understood what they were saying, and it
+        was actually kind of discouraging at the time.  I felt too far behind to catch up.</p>
+        <p>I won't bore you with a whole life story here, but I want to make the point: <b><em>ANYONE</em></b> can learn
+        just about anything.  I kept on trying and trying to understand, and every time I would feel like I understood
+        a new piece of programming, it would just lead me to think, "Okay, but then how does <em>that</em> work??"
+        It seemed like no matter how far down I went, that same question would just keep coming up.  Okay, I can use a
+        programming language, but how does <em>that</em> work?  Okay, it gets translated into machine code by a
+        compiler, but how does <em>that</em> work?  Okay, the machine code gets mapped onto instructions in a chip on
+        the motherboard, but how does <em>that</em> work?  Okay, the data lines can be on or off and there are control
+        signals to tell the computer which chips need access to which data at each clock pulse, but how does
+        <em>that</em> work?  Okay, now I understand that transistors, resistors, capacitors, etc. control the flow of
+        electricity in the system so that signals always and only get where they need to go, but how does <em>that</em>
+        work?</p>
+        <p>When I went back to school, I stayed in for 10 years, and one thing I learned about myself is this: if I want
+        to learn anything at all, the best way for me to do so is to put my hands on it and build one myself.  To that
+        end, when I wanted to understand Assembly code better, I decided to just make my own.  Sure, it doesn't work
+        with any currently used instruction set, but that wasn't the point.  The point was for me to build an assembler
+        that is as versatile as actual assemblers in use today.</p>
+        <img alt="My assembler computing Fibonacci numbers" width="700" height="400" class="center" src="/imgs/fib.gif">
+        <p>What you see here is my assembler carrying out a full program.  What is the program, you ask?  No computer
+        engineer will be surprised to learn that it is calculating Fibonacci numers!  Cliche?  Yes.  Valuable?  Also
+        yes.  And anyone watching the program execute might notice that I didn't exactly do things the most efficient
+        way... I'll fix that, I promise.  But I learned a great deal in doing this project, and I will be continuing
+        work on it in the future.  Right now, it has a chunk of virtual memory, flags, registers, a program counter,
+        and several instructions that can operate on literal values or dereference memory locations.</p>
+        <p>One time a student approached me and said they wanted to work on projects for their portfolio, but had a kind
+        of creativity paralysis where they couldn't settle on a project idea, and thus never got any coding done on
+        their own.  They were "waiting for the right project."  They asked for my advice, and what I showed them was
+        this.  I told them that this project is practically useless, in that it will never go into large scale
+        production.  It won't be used by millions to solve the world's problems, and it won't disrupt any industries.
+        But it does do a few things.  It helps me learn computer architecture better.  It helps me practice full-stack
+        development by implementing a GUI to go along with the assembler itself.  It shows off my capabilities in
+        quickly prototyping a design.  And importantly, it was a lot of fun.  Just like with that student, I encourage
+        you to work on more "useless" projects.  They're much more valuable than they seem!</p>
       </div>
   </div>
 
   <button type="button" class="collapsible">City Builder Game</button>
   <div class="content">
       <div class="normaltext">
-        <p>Here is one two</p>
-        <p>Here is another one two</p>
+        <p>I don't know about you, but I loved playing video games as a kid.  I had two soft spots in gaming: flight
+        simulation games, and city builders.  If you aren't familiar with the genre, a "city builder" is a
+        management-focused game in which you, as the name suggests, build a city.  The challenge in these games comes
+        from the interdependencies of all the moving parts involved.</p>
+        <p>you want to build a city, you need people. If you want people, you need housing.  If you want housing, you
+        need materials.  If you want materials, you need production facilities.  If you want those facilities to run,
+        you need to maintain your population, which requires plenty of food, water, and other resources.  If you don't
+        have enough production to satisfy your population, then people begin to leave, and so businesses slow down
+        production even more, and the cycle feeds itself.  In general, the trick to these games is to develop things
+        in such a way that each new development is well-supported by all the ones that came before it.</p>
+        <p>As I was growing up, I played a lot of city building games, and I always had the same thought: I wish this
+        game had <em>x</em> feature.  When I would play Age of Empires, I loved the military aspect, but always wanted
+        a more robust economic system.  When I would play Caesar III or Pharaoh, I loved the city design aspects of
+        the game, but I wanted the economy to be just a little more interconnecting, and the combat was awful.  When
+        I would play Stronghold, the military was great and the economy was just slightly less complex than that of
+        Pharaoh, but the buildings in your city could just be placed anywhere - there was no sense of design to it
+        outside of making sure that things were close together to reduce villager travel time.  All of these games shone
+        in their own areas, but I always felt like I was left wanting.  They all got part of it right, but never all
+        in the same place at the same time.  So I decided to build my own.</p>
+        <img src="imgs/city-builder.png" class="center">
+        <p>Looks pretty rough if I'm being honest!  And it certainly is.  I don't claim to be an expert.  I wanted to
+        know exactly how the games I love worked, and so I wanted to build the whole thing from scratch.  I built the
+        engine from scratch, all of the images, all of the sounds, and all of the logic.  Every line of code in this
+        game was written into an initially blank source file.  On my first day, I could draw a square grid on the
+        screen.  On the second day, I could transform it to use isometric coordinates for perspective.  By the end of
+        the first week, I had buildings, resources, usage rates, moving characters with different roles, a navmesh for
+        the map so characters can find efficient paths to move around, and much more.</p>
+        <p>This is my favorite personal project because, when it is complete, I'll have made the game I always wanted to
+        play when I was a kid.  A complex economy, an evolving society, and a fluid military interface, all wrapped
+        up in a single game.  One day I will certainly switch over to using professional engines, especially when I
+        start looking to publish this program.  But until then, I'm just having fun learning everything I can about
+        game development from the ground up.</p>
+      </div>
+  </div>
+
+  <button type="button" class="collapsible">Custom Programming Language (SAFyR)</button>
+  <div class="content">
+      <div class="normaltext">
+        <p>This is my most recent project, and so right now I unfortunately don't have much to show for it.  However,
+        something that has always nagged at me since I was in school was the fact that I never had the chance to take
+        a class in programming languages or compilers.  Web programming?  Check.  Networks?  Check.  Operating systems,
+        AI, signal processing?  Check, check, check.  But no programming languages or compilers.  There is only one way
+        in my mind to remedy that: open up a blank text file and start writing one from scratch.  So that's what I'm
+        doing.</p>
+        <p>At the moment, my language SAFyR is very early in development, but I am extremely proud to say that, a little
+        thinking and one finite state machine later, the lexer for my language is complete!  I am currently working on
+        the parser, but I will need to figure out more about the grammar I intend to use for my language before I can
+        write a compiler to recognize it.  And who knows?  Maybe I'll even compile it down into my very own assembly
+        language!  And then I'll need to design my own cpu...  This could take a while.  I'm all in!</p>
       </div>
   </div>
 
