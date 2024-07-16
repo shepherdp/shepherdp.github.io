@@ -13,7 +13,7 @@
 
 <div class="sidenav">
   <a href="./index.html">Intro</a>
-  <a href="./projects.html">Projects</a>
+  <a href="./projects.html" style="color:white">Projects</a>
   <a href="./publications.html">Publications</a>
   <a href="./writings.html">Writings</a>
   <a href="./resume.html">Resume</a>
@@ -243,6 +243,119 @@
         the parser, but I will need to figure out more about the grammar I intend to use for my language before I can
         write a compiler to recognize it.  And who knows?  Maybe I'll even compile it down into my very own assembly
         language!  And then I'll need to design my own cpu...  This could take a while.  I'm all in!</p>
+        <p>In the following examples, I will show you some of what this language is going to look like when it is done.
+        I have a lot of ideas, and this language is mostly for practice.  However, I have some design goals in mind.
+        First: brevity without sacrificing too much clarity.  I feel like a lot of languages have a lot of boilerplate
+        that just takes a long time to type.  If I can implement some features that abstract this away, that would be
+        great.  Second: I do love to program using OO principles.  It's easy for me to think of objects in my program
+        as critters that have individual characteristics and know how to do particular tasks.  However, OOP is also a
+        GREAT way to obfuscate your code without actually obfuscating your code.  I want to approach OOP with more of
+        a mix-and-match mindset.  For example, I want to be able to write a *function* called 'add' somewhere in my
+        code, and then attach that function as a *method* to different objects and allow it to mean different things
+        depending on context.  In a normal OOP language, that would involve defining the function, defining the class,
+        and then defining a method inside the class that calls that function with particular parameters and then
+        returns whatever it does.  I want to simplify that process.  Let's take a look at how my code will look once
+        the language is complete.</p>
+        <div class="center">
+          <div class="codebox">
+            <div class="codetext">
+              a = 5<br>
+              b = "abc"
+            </div>
+          </div>
+        </div>
+        <p>Guess what that does.  Guess!  It assigns the value 5 to the variable a and the value "abc" to the variable
+        b.  So far so good.  I did say brevity was important.  Want to define a function?  Let's define that function
+        called 'add' that I mentioned before.</p>
+        <div class="center">
+          <div class="codebox">
+            <div class="codetext">
+              .add [num1 num2] {<br>
+              &emsp;return num1 + num2<br>
+              }
+            </div>
+          </div>
+        </div>
+        <p>Great!  Now we have a function by the name of 'add' that expects to receive two arguments.  Note that the way
+        we denote this as a function definition is by the '.' at the beginning.  That is for a reason.  It will return
+        the result of applying the '+' operator to those two things.  We'll come back to this in a sec.  So we have a
+        function, and next we should look at structs.  These are structs in the same sense that they appear in C: that
+        is, basically just a collection of variables.  Let's make a struct called 'heightandweight' that holds two
+        numbers.  Height and weight.  Imagine that.</p>
+        <div class="center">
+          <div class="codebox">
+            <div class="codetext">
+              :heightandweight [h w] {<br>
+              &emsp;height = h<br>
+              &emsp;weight = w<br>
+              }<br><br>
+              myvar = heightandweight <~ 5 7
+            </div>
+          </div>
+        </div>
+        <p>Now I have a variable called 'myvar' that is an instance of the struct type 'heightandweight', and it has
+        two data members: height which is equal to 5, and weight which is equal to 7.  The definition of a struct will
+        always start with ':'.  I like the way it looks, using a single dot to denote functions and two stacked dots
+        to denote objects.  You probably also noticed something strange about the way I instantiated 'myvar'.  First of
+        all, there are no parentheses.  The list of input values is simply a bunch of values separated by spaces.
+        Second, instead of being inside of parentheses, these values are just fed into the struct definition via the
+        '<~' operator.  Incidentally, this is also how we'll call functions!  Let's look at that add function again, and
+        call it to get a result.</p>
+        <div class="center">
+          <div class="codebox">
+            <div class="codetext">
+              result = add <~ 5 7<br>
+              >>> 12
+            </div>
+          </div>
+        </div>
+        <p>It uses the same syntax as before.  But now let's do something interesting.  Let's say that I want my
+        heightandweight objects to be able to do stuff when they are passed to the 'add' function.  Obviously an object
+        of type heightandweight doesn't know how to add itself to anything by default.  We'll add that functionality
+        now.</p>
+        <div class="center">
+          <div class="codebox">
+            <div class="codetext">
+              .add [num1 num2] {<br>
+              &emsp;return num1 + num2<br>
+              }<br><br>
+              :heightandweight [h w] {<br>
+              &emsp;height = h<br>
+              &emsp;weight = w<br><br>
+              &emsp;.add <~ height<br>
+              }<br><br>
+              myvar = heightandweight <~ 5 7<br>
+              result = add <~ myvar 10<br>
+              >>> 15<br>
+              result = add <~ 10 myvar<br>
+              >>> 15<br>
+              result = add <~ myvar myvar<br>
+              >>> 10
+            </div>
+          </div>
+        </div>
+        <p>We added a line inside the definition of the heightandweight struct that tells it, "If you are passed as an
+        argument to the function 'add', then use your 'height' attribute as the number that gets added."  Of course,
+        'add' may not be the best example for this behavior, since it already has the '+' operator that does the same
+        thing.  Let's deal with that.</p>
+        <div class="center">
+          <div class="codebox">
+            <div class="codetext">
+              :heightandweight [h w] {<br>
+              &emsp;height = h<br>
+              &emsp;weight = w<br><br>
+              &emsp;.+ <~ height<br>
+              }<br><br>
+              myvar = heightandweight <~ 5 7<br>
+              result = myvar + 10<br>
+              >>> 15<br>
+              result = 10 + myvar<br>
+              >>> 15<br>
+              result = myvar + myvar<br>
+              >>> 10
+            </div>
+          </div>
+        </div>
       </div>
   </div>
 

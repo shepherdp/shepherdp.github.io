@@ -21,15 +21,64 @@
   <a href="./index.html">Intro</a>
   <a href="./projects.html">Projects</a>
   <a href="./publications.html">Publications</a>
-  <a href="./writings.html">Writings</a>
+  <a href="./writings.html" style="color:white">Writings</a>
   <a href="./resume.html">Resume</a>
 </div>
 
 <div class="main">
   <p>( ^ w ^ ) Peekaboo!</p>
-  <div class="vertical-panel">
-    <p>Coming soon.  For now, check out <a href="https://medium.com/@patrick.shepherd.cs/a-simple-python-classifier-for-strings-of-random-characters-13892cb7b83b" target="_blank">this article</a> I wrote on Medium!</p>
-    <p>Also, here is an interview I did about studying AI: <a href="https://techguide.org/computer-science/masters-in-artificial-intelligence/#expert=patrick-shepherd" target="_blank">TechGuide.org</a></p>
+  <div class="normaltext">
+
+    <div class="vertical-panel">
+      <h3 style="color: green"><b>The 2/3 Problem</b></h3>
+      <p>I put an article out on Medium that I hope to continually update.  It describes a phenomenon I've seen many
+        examples of in several different places.  The essence of the 2/3 Problem is this: some problems exist that are
+        really easy to solve when <em>n</em> = 2, but they become VERY hard to solve when <em>n</em> = 3, whatever
+        <em>n</em> happens to be in the case at hand.  Three notable examples are the Three Body Problem out of physics,
+        3-SAT out of computer science, and Fermat's Last Theorem from mathematics.
+      </p>
+
+      <p>All three of these problems are parameterized by a number <em>n</em> - for the first, it is the number of
+        bodies; for the second, it is the number of variables per clause; and for the third, it is the value of the
+        exponent.  In all three cases, if you set <em>n</em> = 2 in their respective contexts, these three problems are
+        incredibly easy to solve.  As soon as <em>n</em> = 3, they become incredibly difficult (or impossible) to solve.
+      </p>
+
+      <p>Please take a minute to read through my <a href="https://medium.com/@patrick.shepherd.cs/the-2-3-problem-bede569a9aa1">
+          article</a> here and learn about a few of these problems.  Who knows?  Maybe you know of your own 2/3 Problem!
+        I would love to hear about it.
+      </p>
+    </div>
+
+    <div class="vertical-panel">
+      <h3 style="color: green"><b>Simple Machine Learning: Teaching a Computer to Spot Random Strings</b></h3>
+      <p>A short while ago, I was working on a project for a company that involved some general web scraping. In essence,
+        I would go through a few public databases and collect information about companies that had been users of
+        various financial instruments.  I would then scour the web for each of these companies to gather other public
+        information about them - mostly things like business addresses and company websites.  In order to keep my
+        searches broad so as not to miss any juicy data, I had to gather a lot of raw data that turned out to be
+        garbage and needed to be gone through and cleaned out.
+      </p>
+      <p>The nature of this "garbage" was generally strings representing URLs that turned out to just be random character
+        strings I had picked up off of some website during the search.  I would have plenty of strings like "aHH6tgI.com"
+        in my data set, and needed to be rid of them because they were cluttering up my data space.  On the one hand,
+        I did NOT want to filter these things manually.  On the other hand, I also didn't want to narrow my tool's
+        search capabilities because it was gathering the data I needed it to.
+      </p>
+      <p>In response to this, I created a miniature machine learning model, trained it on valid strings, and then allowed
+        it to do my data cleansing for me.  I ran several tests against data I had labeled to measure its performance,
+        and it was able to clean up far over 95% of the "garbage" in my data, and lost less than 1% of the good data.
+        Frankly, even the cases in which good data was filtered out were understandable, given the individual strings
+        that didn't make it through the filter.
+      </p>
+
+      <p>To see a small example of data science and ML in action, feel free to take a look through the
+        <a href="https://medium.com/@patrick.shepherd.cs/the-2-3-problem-bede569a9aa1">
+          article</a> here.  It may inspire you to pick up a little machine learning yourself!  It's much more approachable
+        than people give it credit for.
+      </p>
+    </div>
+
   </div>
 </div>
 

@@ -6,6 +6,19 @@
     padding-bottom: 10px;
 }
 
+.codebox {
+    border:1px solid #888;
+    border-radius:10px;
+    background-color: #CCC;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.codetext {
+    padding-left: 20px;
+    font-family: 'Courier New';
+}
+
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
